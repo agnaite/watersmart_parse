@@ -28,7 +28,7 @@ Selects all customers that have ordered pepperoni pizza in the past 30 days:
 ```sql
 SELECT *
 FROM customer INNER JOIN customer_order
-ON customer.customer_id = customer_order.customer_id
-WHERE customer_order.pizza_id = (SELECT pizza_id FROM pizza WHERE name = 'pepperoni')
-AND customer_order.order_date >= '2017/08/02';
+ON customer.customer_id = order.customer_id
+WHERE order.pizza_id = (SELECT pizza_id FROM pizza WHERE name = 'pepperoni')
+AND order.order_date >= '2017/08/02';
 ```
