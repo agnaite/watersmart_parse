@@ -1,9 +1,11 @@
-# Problem 2
+# Solutions
+
+## Problem 2
 
 Rewriting the function so that we sum up all the distances between each data
 point and the mean first, and then divide by the number of data points and
 take the square root, fixes the problem. In other words, we do not want to
-divide and take square root of the sum in each iteration.
+divide and take the square root of the sum in each iteration.
 
 ```py
 import math
