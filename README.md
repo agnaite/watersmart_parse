@@ -32,3 +32,18 @@ ON customer.customer_id = order.customer_id
 WHERE order.pizza_id = (SELECT pizza_id FROM pizza WHERE name = 'pepperoni')
 AND order.order_date >= '2017/08/02';
 ```
+
+Selects customer that has spent the most on pizza in the past 30 days.
+
+```sql
+SELECT customer.customer_id, customer.customer_name,
+customer_order.quantity * pizza.price AS total
+FROM customer_order
+JOIN pizza
+ON customer_order.pizza_id = pizza.pizza_id
+JOIN customer
+ON customer_order.customer_id = customer.customer_id
+WHERE customer_order.order_date >= '2017/08/02'
+ORDER BY total DESC
+LIMIT 1;
+```
