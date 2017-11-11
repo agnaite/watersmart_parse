@@ -1,5 +1,9 @@
 # Solutions
 
+## Problem 1
+
+See `parse_data.py`.
+
 ## Problem 2
 
 Rewriting the function so that we sum up all the distances between each data
