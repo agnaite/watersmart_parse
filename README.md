@@ -25,6 +25,12 @@ def standard_deviation(number_list):
     return math.sqrt(stdev/float(len(number_list)))
 ```
 
+## Problem 3
+
+From the report, I can interpret that for March, April, and May the number of accounts reported were about the same, that each account was reporting for the same number of days, and that the gallons of water used per day was drastically higher in May of 2017, but similar to April and March in May of last year.
+
+I would improve this chart by not using negative percentages to make it easier to read. The color coding for the previous period/year is also confusing, as the color green implies the increase in water used is positive, and the decrease in red is bad. 
+
 ## Problem 4
 
 Selects all customers that have ordered pepperoni pizza in the past 30 days:
@@ -51,3 +57,10 @@ WHERE customer_order.order_date >= current_date - interval '30' day
 ORDER BY total DESC
 LIMIT 1;
 ```
+
+## Problem 5
+
+- What format do the postal code and date parameters need to be passed in?
+  (datetime, string?)
+- Need unit tests to make sure the function is returning data as expected
+- If data is returned as expected, need to check if results are accurate
